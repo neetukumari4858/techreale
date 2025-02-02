@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Book Manager 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Developed a Dashboard with Authentication, CRUD Operations and Responsive UI
 
-## Available Scripts
 
-In the project directory, you can run:
+## Instalation
 
-### `npm start`
+Instructions on how to get a copy of the project and running on your local machine.
+```bash
+ Clone the Project
+ npm install
+ npm run serve-json (To start JSON Server)
+ npm start
+```
+## Authentication Credentials
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+Authentication: JWT (Live API provided)
+API_URL: https://dev.api.theforgeapp.io/api/v1/admin/auth/login
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+emaill:admin@gmail.com
+password:123456
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Live Project Link
 
-### `npm run build`
+Open [https://techrealebookmanager.netlify.app/) to view it in your browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_Name the technologies used in the project._ 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [React](https://reactjs.org/)
+* [Javascript](https://javascript.info/) 
+* [React Router](https://spring.io/) 
+* [React Hook Form ](https://reactrouter.com/) - For form management
+* [Redux Toolkit](https://redux-toolkit.js.org//) - For State management
+* [React Query ](https://medium.com/bina-nusantara-it-division/understanding-react-query-11e56960e90c/) - for server-side data fetching
+* [Material UI ](https://mui.com/material-ui/?srsltid=AfmBOooNKLiajaILtLFUcOKwTe7K3dusmgtmApt3vGfW3AC94v03sON8/) - For Designing
+* [JSON Server](https://www.npmjs.com/package/json-server/) 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Features 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+_The  Features used in the project._ 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Login System
+   * Integrate a live authentication API (provided by me).
+   * Implement the login page with email and password fields.
+   * Use Axios interceptors to automatically attach the JWT token to API requests.
+   * Handle token expiration and unauthorized access by redirecting to the login page.
 
-## Learn More
+2. Dashboard Page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    * Implement a protected dashboard that is only accessible after logging in.
+    * Create a sidebar navigation with links to the following pages:
+      Dashboard
+      Manage Products
+      Manage Orders
+      Logout
+    * Implement dark mode toggle 
+    * Ensure the layout is responsive
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3 CRUD Operations for Products
 
-### Code Splitting
+    * Create Product:
+    * Implement a form with input fields for name, description, price,category, and status.
+    * On form submission, send a POST request to JSON Server to add a new product.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    * Read Products:
+    * Fetch the list of products from JSON Server and display them in a Table.
+    * Display product details such as name, description, price, category, status, etc.
 
-### Analyzing the Bundle Size
+    * Update Product:
+    * Allow editing of product details (name, description, price, category, etc.).
+    * On form submission, send a PUT request to update the product in JSON Server.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    * Delete Product:
+    * Implement a delete functionality for removing products.
+    * Show a confirmation dialog before deleting a product.
+    * On confirmation, send a DELETE request to JSON Server.
 
-### Making a Progressive Web App
+4  Global API Interceptor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    * Use Axios interceptors to manage the JWT token for API requests.
+    * If the token is expired or the user is unauthorized (status code 401), redirect them to the login page.
+    * Ensure all the API requests are authenticated using the stored JWT token.
 
-### Advanced Configuration
+5. Search, Pagination, and Sorting
+    * Implement search functionality for products by name, category, or description.
+    * Implement pagination and sorting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
