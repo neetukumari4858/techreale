@@ -1,0 +1,148 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "The Alchemist Book",
+      "description": "A philosophical novel",
+      "price": "12.99",
+      "category": "Fiction",
+      "status": "In Stock"
+    },
+    {
+      "id": "2",
+      "name": "To Kill a Mockingbird",
+      "description": "A novel injustice",
+      "price": "15.99",
+      "category": "Classic",
+      "status": "In Stock"
+    },
+    {
+      "id": "4",
+      "name": "The Great Gatsby",
+      "description": "A novel set ",
+      "price": "10.99",
+      "category": "Classic",
+      "status": "In Stock"
+    },
+    {
+      "id": "5",
+      "name": "Moby Dick",
+      "description": "An epic adventure",
+      "price": "18.99",
+      "category": "Adventure",
+      "status": "In Stock"
+    },
+    {
+      "id": "6",
+      "name": "Pride and Prejudice",
+      "description": "A romantic novel",
+      "price": "11.50",
+      "category": "Romance",
+      "status": "In Stock"
+    },
+    {
+      "id": "7",
+      "name": "The Catcher in the Rye",
+      "description": "A novel teenage ",
+      "price": "13.99",
+      "category": "Classic",
+      "status": "Out of Stock"
+    },
+    {
+      "id": "8",
+      "name": "Brave New World",
+      "description": "A dystopian novel",
+      "price": "16.99",
+      "category": "Science Fiction",
+      "status": "In Stock"
+    },
+    {
+      "id": "9",
+      "name": "War and Peace",
+      "description": "A historical novel",
+      "price": "19.99",
+      "category": "Historical",
+      "status": "In Stock"
+    },
+    {
+      "id": "10",
+      "name": "Crime and Punishment",
+      "description": "A psychological",
+      "price": "14.75",
+      "category": "Classic",
+      "status": "In Stock"
+    },
+    {
+      "id": "11",
+      "name": "Frankenstein",
+      "description": "A gothic horror novel",
+      "price": "12.49",
+      "category": "Horror",
+      "status": "Out of Stock"
+    },
+    {
+      "id": "12",
+      "name": "The Hobbit",
+      "description": "A fantasy adventure",
+      "price": "17.99",
+      "category": "Fantasy",
+      "status": "In Stock"
+    },
+    {
+      "id": "13",
+      "name": "Dracula",
+      "description": "A vampire horror",
+      "price": "13.50",
+      "category": "Horror",
+      "status": "In Stock"
+    },
+    {
+      "id": "14",
+      "name": "Les Misérables",
+      "description": "A novel of justice",
+      "price": "20.00",
+      "category": "Historical",
+      "status": "In Stock"
+    },
+    {
+      "id": "15",
+      "name": "The Odyssey",
+      "description": "An ancient Poem",
+      "price": "14.25",
+      "category": "Mythology",
+      "status": "In Stock"
+    },
+    {
+      "id": "16",
+      "name": "The Divine Comedy",
+      "description": "An epic poem ",
+      "price": "21.99",
+      "category": "Classic",
+      "status": "In Stock"
+    },
+    {
+      "id": "6832",
+      "name": "demo",
+      "description": "nm",
+      "price": "12323",
+      "category": "qwe",
+      "status": "instock"
+    },
+    {
+      "id": "c203",
+      "name": "demo1",
+      "description": "nm",
+      "price": "123123",
+      "category": "as",
+      "status": "Out of Stock"
+    },
+    {
+      "id": "bd00",
+      "name": "demoup2",
+      "description": "zxc",
+      "price": "123",
+      "category": "qwe",
+      "status": "in stock"
+    }
+  ]
+}
