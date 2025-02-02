@@ -22,7 +22,11 @@ const Login = () => {
             enqueueSnackbar('Login successfuly!', { variant: 'success' });
             navigate("/dashboard");
         } catch (error) {
-            throw error;
+            if (error.response && error.response.status === 400) {
+                enqueueSnackbar('Invalid credentials. Please check your email and password.', { variant: 'error' });
+            } else {
+                enqueueSnackbar('Something went wrong. Please try again later.', { variant: 'error' });
+            }
         }
     }
     return (

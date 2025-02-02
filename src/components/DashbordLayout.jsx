@@ -1,14 +1,17 @@
-import React, { useState, useMemo } from "react"
+import React, { useState, useMemo ,useCallback} from "react"
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LayersIcon from '@mui/icons-material/Layers';
 import LogoutIcon from '@mui/icons-material/Logout';
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { extendTheme } from '@mui/material/styles';
 import { AppProvider } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
 import { DashbordPage, ManageProductsPage, ManageOrdersPage } from '../pages';
 import { Container } from '@mui/material';
-
+import { useColorScheme } from "@mui/material/styles";
+import { IconButton, Tooltip } from "@mui/material";
 const handleLogout = () => {
   localStorage.removeItem("token");
   window.location.href = "/";
@@ -55,9 +58,6 @@ const getPageComponent = (pathname) => {
 }
 
 const demoTheme = extendTheme({
-  cssVariables: {
-    colorSchemeSelector: 'data-toolpad-color-scheme',
-  },
   colorSchemes: { light: true, dark: true },
   colorSchemeSelector: 'class',
   breakpoints: {
@@ -70,6 +70,21 @@ const demoTheme = extendTheme({
     },
   },
 });
+
+function CustomThemeSwitcher() {
+  const { mode, setMode } = useColorScheme();
+  const toggleTheme = useCallback(() => {
+    setMode(mode === "light" ? "dark" : "light");
+  }, [mode, setMode]);
+
+  return (
+    <Tooltip title="Toggle Theme">
+      <IconButton onClick={toggleTheme}>
+        {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+      </IconButton>
+    </Tooltip>
+  );
+}
 
 export function useDemoRouter(initialPath) {
   const [pathname, setPathname] = useState(initialPath);
@@ -94,7 +109,9 @@ export default function Dashboard() {
         title: 'Book Maganer',
       }}
     >
-      <DashboardLayout>
+      <DashboardLayout slots={{
+          toolbarActions: CustomThemeSwitcher,
+        }}>
         <Container>
           {getPageComponent(router.pathname)}
         </Container>

@@ -22,7 +22,7 @@
       "description": "A novel set ",
       "price": "10.99",
       "category": "Classic",
-      "status": "In Stock"
+      "status": "Out of Stock"
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "description": "A romantic novel",
       "price": "11.50",
       "category": "Romance",
-      "status": "In Stock"
+      "status": "Out of Stock"
     },
     {
       "id": "7",
@@ -119,30 +119,6 @@
       "price": "21.99",
       "category": "Classic",
       "status": "In Stock"
-    },
-    {
-      "id": "6832",
-      "name": "demo",
-      "description": "nm",
-      "price": "12323",
-      "category": "qwe",
-      "status": "instock"
-    },
-    {
-      "id": "c203",
-      "name": "demo1",
-      "description": "nm",
-      "price": "123123",
-      "category": "as",
-      "status": "Out of Stock"
-    },
-    {
-      "id": "bd00",
-      "name": "demoup2",
-      "description": "zxc",
-      "price": "123",
-      "category": "qwe",
-      "status": "in stock"
     }
   ]
 }
