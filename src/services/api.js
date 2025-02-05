@@ -1,6 +1,6 @@
 import axios from "axios";
 const BASE_URL = 'https://dev.api.theforgeapp.io/api/v1/admin/auth/login'
-const API_URL = 'http://localhost:3001'
+const API_URL = 'https://json-server-api-xe53.onrender.com'
 const getToken = () => localStorage.getItem('token')
 
 const authApi = axios.create({
