@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Book Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Dashboard application that includes a login system, CRUD operations for products, API integration, state management, authorization handling, and a responsive UI that works across multiple device sizes.
+## Instalation
 
-## Available Scripts
+Instructions on how to get a copy of the project and running on your local machine.
 
-In the project directory, you can run:
+```bash
+Clone the Project
+npm install
+npm start
+```
 
-### `npm start`
+### Authentication and Credentials
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+Authentication: JWT (Live API provided)
+API_URL: https://dev.api.theforgeapp.io/api/v1/admin/auth/login
 
-### `npm test`
+emaill:admin@gmail.com
+password:123456
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+## Deployed Link
+Open [https://techrealepracticaltask.netlify.app/](https://techrealepracticaltask.netlify.app/) to view it in your browser.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_Name the technologies used in the project._ 
+* [Reactjs](https://reactjs.org/) 
+* [Javascript](https://javascript.info//) 
+* [React Router](https://reactrouter.com/) 
+* [Material Ui](https://mui.com/material-ui/?srsltid=AfmBOooW0GhjF3tll_dCOhoUMgYgZl5ZLOJHsC_tTIMetdN8aS6kYmML/)  -(For Designing)
+* [React Hook Form ](react-hook-form.com/) -(for form management)
+* [Redux Toolkit](https://redux-toolkit.js.org//) -(for state management)
+* [React Query ](https://handsonreact.com/docs/react-query/) - (for server-side data fetching)
+* [Axios,JSON Server ](https://www.npmjs.com/package/json-server/) - (for fake API)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
+Name the features used in the project.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Login System
+   * Integrate a live authentication API (provided by me).
+   * Implement the login page with email and password fields.
+   * Use Axios interceptors to automatically attach the JWT token to API requests.
+   * Handle token expiration and unauthorized access by redirecting to the login page.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Dashboard Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    * Implement a protected dashboard that is only accessible after logging in.
+    * Create a sidebar navigation with links to the following pages:
+      Dashboard
+      Manage Products
+      Manage Orders
+      Logout
+    * Implement dark mode toggle 
+    * Ensure the layout is responsive
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3 CRUD Operations for Products
 
-## Learn More
+    * Create Product:
+    * Implement a form with input fields for name, description, price,category, and status.
+    * On form submission, send a POST request to JSON Server to add a new product.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    * Read Products:
+    * Fetch the list of products from JSON Server and display them in a Table.
+    * Display product details such as name, description, price, category, status, etc.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    * Update Product:
+    * Allow editing of product details (name, description, price, category, etc.).
+    * On form submission, send a PUT request to update the product in JSON Server.
 
-### Code Splitting
+    * Delete Product:
+    * Implement a delete functionality for removing products.
+    * Show a confirmation dialog before deleting a product.
+    * On confirmation, send a DELETE request to JSON Server.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4  Global API Interceptor
 
-### Analyzing the Bundle Size
+    * Use Axios interceptors to manage the JWT token for API requests.
+    * If the token is expired or the user is unauthorized (status code 401), redirect them to the login page.
+    * Ensure all the API requests are authenticated using the stored JWT token.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. Search, Pagination, and Sorting
+    * Implement search functionality for products by name, category, or description.
+    * mplement pagination and sorting
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
